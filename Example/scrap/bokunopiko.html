@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+	<link rel="stylesheet" href="bokunopiko_files/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="bokunopiko_files/style.css">
+	<title>Buy/Sell</title>
+	<script src="bokunopiko_files/angular.js"></script>
+    <script src="bokunopiko_files/jquery.js"></script>
+</head>
+<h1>The Crypto Bros</h1>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5 col-md-offset-1 price-boxes">
+				<div class="panel-group">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<h6><a href="https://www.cryptocompare.com/"></a></h6>
+							<h2 class="price-display">BTC - USD <span class="up" id="PRICE_BTC"></span></h2>
+							<h5>24h Change: <span id="CHANGE24HOUR_BTC">$ -1,375.62</span><span id="CHANGE24HOURPCT_BTC" class="down"></span><br></h5>
+							<h5>Last Market: <span class="exchange" id="LASTMARKET_BTC"></span> <br></h5>
+							<h5>Trade ID: <span id="LASTTRADEID_BTC"></span><br></h5>
+							<h5>Open Hour: <span id="OPENHOUR_BTC">Ƀ</span><br></h5>
+							<h5>High Hour: <span id="HIGHHOUR_BTC">Ƀ</span><br></h5>
+							<h5>Low Hour: <span id="LOWHOUR_BTC">Ƀ </span><br></h5>
+							<h5>Open Day: <span id="OPEN24HOUR_BTC">Ƀ </span><br></h5>
+							<h5>High Day: <span id="HIGH24HOUR_BTC">Ƀ </span><br></h5>
+							<h5>Low Day: <span id="LOW24HOUR_BTC">Ƀ </span><br></h5>
+							<h5>Last Trade Volume: <span id="LASTVOLUME_BTC">Ƀ</span><br></h5>
+							<h5>Last Trade Volume To: <span id="LASTVOLUMETO_BTC">$</span><br></h5>
+							<h5>24h Volume: <span id="VOLUME24HOUR_BTC">Ƀ </span><br></h5>
+							<h5>24h VolumeTo: <span id="VOLUME24HOURTO_BTC">$</span><br></h5>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-5 price-boxes">
+				<div class="panel-group">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<h6></h6>
+							<h2 class="price-display">ETH - USD <span class="up" id="PRICE_ETH"></span></h2>
+							<h5>24h Change: <span id="CHANGE24HOUR_ETH">$ -120.83</span><span id="CHANGE24HOURPCT_ETH" class="down"></span><br></h5>
+							<h5>Last Market: <span class="exchange" id="LASTMARKET_ETH"></span> <br></h5>
+							<h5>Trade ID: <span id="LASTTRADEID_ETH"></span><br></h5>
+							<h5>Open Hour: <span id="OPENHOUR_ETH">Ξ </span><br></h5>
+							<h5>High Hour: <span id="HIGHHOUR_ETH">Ξ </span><br></h5>
+							<h5>Low Hour: <span id="LOWHOUR_ETH">Ξ </span><br></h5>
+							<h5>Open Day: <span id="OPEN24HOUR_ETH">Ξ</span><br></h5>
+							<h5>High Day: <span id="HIGH24HOUR_ETH">Ξ </span><br></h5>
+							<h5>Low Day: <span id="LOW24HOUR_ETH">Ξ </span><br></h5>
+							<h5>Last Trade Volume: <span id="LASTVOLUME_ETH">Ξ</span><br></h5>
+							<h5>Last Trade Volume To: <span id="LASTVOLUMETO_ETH">$ </span><br></h5>
+							<h5>24h Volume: <span id="VOLUME24HOUR_ETH">Ξ</span><br></h5>
+							<h5>24h VolumeTo: <span id="VOLUME24HOURTO_ETH">$ </span><br></h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="widget-preview-content" style="width: 350px; min-height: 370px;" ng-class="{'preview-feed-widget': forms.type == 5, 'preview-header-widget': forms.type == 6 || forms.type == 7 || forms.type == 8 || forms.type == 9 || forms.type == 11 || forms.type == 12}" id="widget-preview-content">
+        <script async="" type="text/javascript" id="ccc-ws-999">(function() {
+            baseUrl = "https://widgets.cryptocompare.com/"; // allows use of the widget
+            var scripts = document.getElementsByTagName("script");
+            var embedder = document.getElementById('ccc-ws-999');
+
+            (function (){
+                var appName = encodeURIComponent(window.location.hostname);
+                if(appName==""){appName="local";}
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+
+                var theUrl = baseUrl+'serve/v1/coin/chart?fsym=BTC&tsym=USD';// api call
+                s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + 'app=' + appName;
+                embedder.parentNode.appendChild(s);
+            })();
+        })();
+	    </script>
+    </div>
+
+	<form method="post" action = "sell.php">
+		<h3> Sell </h3>
+		<button type="submit" class="btn btn-info btn-block login-button">Sell</button>
+	</form>
+	<form method="post" action = "buy.php">
+		<h3> Buy </h3>
+		<button type="submit" class="btn btn-info btn-block login-button">Buy</button>
+	</form>
+	
+	<!-- these files are needed for the data to update -->
+	<script src="bokunopiko_files/socket.js"></script>
+	<script src="bokunopiko_files/jquery.js"></script>
+	<script src="bokunopiko_files/ccc-streamer-utilities.js"></script>
+	<script src="bokunopiko_files/stream.js"></script>
+
+
+</body></html>

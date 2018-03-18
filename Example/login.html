@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="device-width, initial-scale =1">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="Crypto.css">
+	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+	<title> Crypto Bros Login</title>
+
+	<style>
+		.jumbotron {
+			background-color: darkcyan;
+		}
+		.vertical-center {
+			min-height: fit-content;
+			min-height: 100vh;
+			display: flex;
+		}
+		.form-control {
+			text-align: center;
+		}
+		.container {
+			background-color: white ;
+			width: 30%;
+		}
+		.h2 {
+			font-color: white;
+		}
+		.jumbotron h1,
+		.jumbotron .h1 {
+			font-size: 4.5em;
+			font-family: 'Pacifico', cursive;
+		}
+		.jumbotron p,
+		.jumbotron .p {
+			font-size: 0.8em;
+		}
+		.signup-session h2,
+		.signup-session .h2 {
+			font-color: rgb(0,0,0);
+			font-family: 'Pacifico', cursive;
+			text-align: center;
+			line-height: 1.13;
+			height: 34px;
+			font-size: 100px;
+		}
+	</style>
+
+</head>
+	<body>
+	<div class="container">
+			<div class="page-header">
+				<h1> Crypto Bros</h1>
+			</div>
+
+			<form  method="post" action = "login.php" >
+
+
+				<div class="form-group">
+
+					<div class="cols-lg-6">
+
+                        <input class=form-control type=text name="user_name" id="user_name" required="required" placeholder="Enter User Name">
+						<input class=form-control type=password name="password" id="password" required="required" autocomplete="off" placeholder="Enter Password">
+
+					</div>
+				</div>
+
+				<!--<center><input type = submit></center>-->
+				<button type="submit" class="btn btn-primary btn-info btn-lg btn-block login-button">Login</button>
+
+			</form>
+
+			<form method="post" action = "add_user.html">
+
+
+				<h3> Don't Have An Account? </h3>
+
+
+				<button type="submit" class="btn btn-info btn-block login-button">Create One Now!</button>
+			</form>
+		</div>
+	</body>
+</html>

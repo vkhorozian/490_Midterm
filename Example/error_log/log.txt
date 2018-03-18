@@ -1,0 +1,2 @@
+[12-Feb-2018 17:48:50 America/New_York] PHP Warning:  require(lolihentai.com): failed to open stream: No such file or directory in /var/www/html/error_log/errorlog.php on line 6
+[12-Feb-2018 17:48:50 America/New_York] PHP Fatal error:  require(): Failed opening required 'lolihentai.com' (include_path='.:/usr/share/php') in /var/www/html/error_log/errorlog.php on line 6

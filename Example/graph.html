@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<div class="widget-preview-content" style="width: 1280px; min-height: 720px;" ng-class="{'preview-feed-widget': forms.type == 5, 'preview-header-widget': forms.type == 6 || forms.type == 7 || forms.type == 8 || forms.type == 9 || forms.type == 11 || forms.type == 12}" id="widget-preview-content"><script async="" type="text/javascript" id="ccc-ws-999">(function() {
+   baseUrl = "https://widgets.cryptocompare.com/"; // allows use of the widget
+            var scripts = document.getElementsByTagName("script");
+            var embedder = document.getElementById('ccc-ws-999');
+
+   (function (){
+    var appName = encodeURIComponent(window.location.hostname);
+    if(appName==""){appName="local";}
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    
+    var theUrl = baseUrl+'serve/v1/coin/chart?fsym=ETH&tsym=USD';// api call
+    s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + 'app=' + appName;
+    embedder.parentNode.appendChild(s);
+            })();
+          })();
+  </script>
+</html>

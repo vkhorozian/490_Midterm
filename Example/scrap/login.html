@@ -1,0 +1,62 @@
+<!DOCTYPE html5>
+
+    <script>/*
+
+        function f()
+        {
+            var admin = document.getElementById("admin");
+            var user= document.getElementById("user");
+            var user_name = document.getElementById("user_name");
+            var password = document.getElementById("password");
+
+            if (!admin.checked && !user.checked)
+                {
+                    alert ("You must select you're autority level!");
+                    return false;
+
+                }else if (!user_name.value.trim() || !(password.value.trim()))
+                {
+
+                    if(!user_name.value.trim())
+                    {
+                        alert ("Please enter user name");
+                    }else{
+                        alert ("please enter password");
+                    }
+                    return false;
+                }
+        }
+
+*/
+
+    </script>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+            <title>User Login</title>
+                <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+        <body>
+            <form  method="post" action = "login.php" >
+
+                    <br>
+
+                User    <input type=text name="user_name" id="user_name" required="required" placeholder="enter user name"><br>
+                Password <input type=password name="password" id="password" required="required" autocomplete="off" placeholder="enter password"><br>
+
+                    <br>
+                <br>
+            <input type = submit>
+
+            </form>
+
+            <form method="post" action = "create_user.php">
+
+                <br>
+                <h3> Create an account </h3>
+                <br>
+
+                <input type = submit>
+            </form>
+        </body>
+</html>

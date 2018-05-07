@@ -1,0 +1,147 @@
+-- MySQL dump 10.13  Distrib 5.7.22, for Linux (x86_64)
+--
+-- Host: localhost    Database: it490
+-- ------------------------------------------------------
+-- Server version	5.7.22-0ubuntu0.16.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `authTable`
+--
+
+DROP TABLE IF EXISTS `authTable`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `authTable` (
+  `userID` int(11) NOT NULL,
+  `username` varchar(15) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `lastLogin` int(11) NOT NULL,
+  PRIMARY KEY (`userID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `authTable`
+--
+
+LOCK TABLES `authTable` WRITE;
+/*!40000 ALTER TABLE `authTable` DISABLE KEYS */;
+INSERT INTO `authTable` VALUES (10,'asdf','$2y$10$z0fFzIxndb/eRzBYUOin0epHdstoBYXP0XB9nfdfECf.e30cOfHNe','asdf',1525379098),(14,'yerr','$2y$10$OtbLTfsRT/W0mLzu8aQCdO18mY.V/F1z4AJFB2trL7y7lhCZuTZYC','yer',1525379098),(15,'ertaet','$2y$10$1QHhjQiCDIpUXU3IUeHYmOAoP6N1Y9aC8Yr.pjveZf6yLit98KLmS','teat',1525379098),(23,'roottrt','$2y$10$k85L4/AFl2omvyexiKsn8OFyvJR17prJYEhsnR.9ZsEUHEJErTgVK','tret',1525379098),(29,'ben','$2y$10$oJeBzmKdOWZCs6fJQsYBrukVfjxgbBt0rbaU2vL0dXOFlQhhLamZ2','1234@1234.com',1525379098),(32,'rich','$2y$10$tZ4HxGqcw9ejzlYKfuoO3O/jQ.5z9q1pWq04NAoRJsGXAqlOeaecu','qwan',1525379098),(35,'cats','$2y$10$DcYRHfrOJPRz.xH04ZHQUuq4BD5Bvoef4wRYWXmPNFln3JpsLbaQ6','cats',1525379098),(37,'keo6','$2y$10$bcOVejsJoJs45dtSWahd4ek9b33obHTGq/wgoeZFcfQ2UmHwbcyb6','123',1525379098),(44,'hdhd','$2y$10$LXABycZ0ngSDiunJqcNoRuprXWd2VKX/dFkTEuyG5wsjEIKLzL9JK','hdhddhd',1525379098),(47,'root','$2y$10$51zYHzwZCHPH.r9KS91XQe16tAkkG4rTrJ3sgdO9Q9ccJBEm0gRTy','root',1525379098),(53,'yer','$2y$10$OmIrBq9ym7ZU7FIaMXpUl.CqBLgwbAgCwn2TSFj8/Lh0eDTwAGw9q','yer',1525379098),(57,'dj','$2y$10$WpGSga9H8baeYrf1wOP7Dul1qOpZNLaXvO9CaY70Pfj58Q6zKm4Om','djdjd',1525379098),(68,'anoterone','$2y$10$4E.6eeJxciCThqcihcIT3u1TM/.9//t9/dhc.IEd.YX/XXW3DZ10i','one',1525379098),(69,'john','$2y$10$oURvE.HkSfeUrZ2R0iktyO7ldWlmZCwG9zAQ2A5stVv1Way7qJAb6','vjk5',1525379098),(76,'testtt','$2y$10$jmuuLr9mkDz0G/QSYLbFKuRO7wt2CUq6/sO947x.XUslotyu.GjAW','ters',1525379098),(81,'jkl;','$2y$10$w2ZUok1nqU1Nu.wC5/A.TeRXsxRfICqchNlXxcvcCyjaGkWjlOWQm','jkl;',1525379098),(85,'test','$2y$10$HcaouFInpcfnScRpelGvxe40Ylzh6kfi/iajPpbod7pN0QuPKAiNa','test',1525379098),(90,'alec','$2y$10$TBVFVrcqNJg3PIOL/SYLF.QKTysYjMOZjQA.WYQ25YjjoUON.zxMq','alecballs',1525379098),(91,'roottest','$2y$10$3nDXB0wODhGcr6dxkgmg.ulJ2Xbf21Zf.5BqNy35MDGOQn7LjOZWe','test',1525379098),(94,'vkhorozian','$2y$10$HBEW4jE5/lwRg6DMKWtVOOHdaknFnOynDNBI1Kp0JMHJmmcHPn9Tm','vkhorozian@gmail.com',1525379098);
+/*!40000 ALTER TABLE `authTable` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `coinTable`
+--
+
+DROP TABLE IF EXISTS `coinTable`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `coinTable` (
+  `symbol` varchar(5) DEFAULT NULL,
+  `coinID` int(11) NOT NULL,
+  `coinPrice` decimal(20,8) DEFAULT NULL,
+  `lastUpdate` int(11) DEFAULT NULL,
+  `24Volume` decimal(30,8) DEFAULT NULL,
+  `openDay` decimal(20,8) DEFAULT NULL,
+  `highDay` decimal(20,8) DEFAULT NULL,
+  `lowDay` decimal(12,8) DEFAULT NULL,
+  `changePct24Hour` decimal(10,8) DEFAULT NULL,
+  `totalVolume24H` decimal(30,8) DEFAULT NULL,
+  PRIMARY KEY (`coinID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `coinTable`
+--
+
+LOCK TABLES `coinTable` WRITE;
+/*!40000 ALTER TABLE `coinTable` DISABLE KEYS */;
+INSERT INTO `coinTable` VALUES ('BTC',0,9630.18000000,1525379122,87840.57314069,9232.19000000,9751.13000000,9172.28000000,4.76241243,308203.85081828),('ETH',1,0.07838000,1525379123,761994.47644103,0.07448000,0.08063000,0.07442000,5.50545161,2469207.78494961),('LTC',2,0.01662000,1525379107,1169885.44075844,0.01642000,0.01725000,0.01638000,1.15642118,2935629.33346919),('BCH',3,0.15480000,1525379108,221928.97809559,0.15790000,0.16620000,0.15270000,-2.39596469,582872.98897081),('TRX',4,0.00000912,1525379120,3257677334.51807550,0.00000987,0.00000990,0.00000869,-7.41116751,4534741276.06123260);
+/*!40000 ALTER TABLE `coinTable` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `transTable`
+--
+
+DROP TABLE IF EXISTS `transTable`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `transTable` (
+  `timeStamp` int(11) NOT NULL,
+  `totalBTCValue` decimal(30,8) DEFAULT NULL,
+  `purchasedValue` decimal(30,8) DEFAULT NULL,
+  `totalCoinsBought` decimal(10,8) DEFAULT NULL,
+  `coinA` int(11) NOT NULL,
+  `coinB` int(11) NOT NULL,
+  PRIMARY KEY (`timeStamp`,`coinA`,`coinB`),
+  KEY `coinA` (`coinA`),
+  KEY `coinB` (`coinB`),
+  CONSTRAINT `transTable_ibfk_1` FOREIGN KEY (`coinA`) REFERENCES `coinTable` (`coinID`),
+  CONSTRAINT `transTable_ibfk_2` FOREIGN KEY (`coinB`) REFERENCES `coinTable` (`coinID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `transTable`
+--
+
+LOCK TABLES `transTable` WRITE;
+/*!40000 ALTER TABLE `transTable` DISABLE KEYS */;
+/*!40000 ALTER TABLE `transTable` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `userWallet`
+--
+
+DROP TABLE IF EXISTS `userWallet`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `userWallet` (
+  `userID` int(11) NOT NULL,
+  `balance` decimal(14,2) DEFAULT NULL,
+  `bitcoinBalance` decimal(20,8) DEFAULT NULL,
+  `etheriumBalance` decimal(20,8) DEFAULT NULL,
+  `litecoinBalance` decimal(20,8) DEFAULT NULL,
+  `bitcoincashBalance` decimal(20,8) DEFAULT NULL,
+  `tronBalance` decimal(20,8) DEFAULT NULL,
+  PRIMARY KEY (`userID`),
+  CONSTRAINT `userWallet_ibfk_1` FOREIGN KEY (`userID`) REFERENCES `authTable` (`userID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `userWallet`
+--
+
+LOCK TABLES `userWallet` WRITE;
+/*!40000 ALTER TABLE `userWallet` DISABLE KEYS */;
+INSERT INTO `userWallet` VALUES (10,100000.00,0.00000000,0.00000000,0.00000000,0.00000000,0.00000000),(14,100000.00,0.00000000,0.00000000,0.00000000,0.00000000,0.00000000),(15,100000.00,0.00000000,0.00000000,0.00000000,0.00000000,0.00000000),(23,100000.00,0.00000000,0.00000000,0.00000000,0.00000000,0.00000000),(29,100000.00,0.00000000,0.00000000,0.00000000,0.00000000,0.00000000),(32,100000.00,0.00000000,0.00000000,0.00000000,0.00000000,0.00000000),(35,100000.00,0.00000000,0.00000000,0.00000000,0.00000000,0.00000000),(37,100000.00,0.00000000,0.00000000,0.00000000,0.00000000,0.00000000),(44,100000.00,0.00000000,0.00000000,0.00000000,0.00000000,0.00000000),(47,100000.00,10.00000000,0.00000000,0.00000000,0.00000000,0.00000000),(53,100000.00,0.00000000,0.00000000,0.00000000,0.00000000,0.00000000),(57,100000.00,0.00000000,0.00000000,0.00000000,0.00000000,0.00000000),(68,100000.00,0.00000000,0.00000000,0.00000000,0.00000000,0.00000000),(69,100000.00,0.00000000,0.00000000,0.00000000,0.00000000,0.00000000),(76,100000.00,0.00000000,0.00000000,0.00000000,0.00000000,0.00000000),(81,100000.00,0.00000000,0.00000000,0.00000000,0.00000000,0.00000000),(85,1477.78,35.00000000,0.00000000,0.00000000,0.00000000,0.00000000),(90,100000.00,0.00000000,0.00000000,0.00000000,0.00000000,0.00000000),(91,100000.00,0.00000000,0.00000000,0.00000000,0.00000000,0.00000000),(94,100000.00,0.00000000,0.00000000,0.00000000,0.00000000,0.00000000);
+/*!40000 ALTER TABLE `userWallet` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2018-05-06 20:16:55
